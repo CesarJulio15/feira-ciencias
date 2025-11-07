@@ -8,13 +8,13 @@
    1. CUSTOM PROPERTIES (Variáveis CSS)
    ======================================== */
 :root {
-    /* Paleta de cores - tons de azul */
-    --blue-900: #0b3d91;
-    --blue-700: #1464d2;
-    --blue-500: #2a8bf7;
-    --blue-300: #86bdfc;
-    --gray-100: #f5f7fb;
-    --text: #0b2140;
+    /* Paleta de cores - tons de verde */
+    --green-900: #3D7E68; /* Verde escuro */
+    --green-700: #80C4AC; /* Verde médio */
+    --green-500: #97DBC2; /* Verde claro */
+    --green-300: #b7e6d3; /* Verde mais claro (derivado) */
+    --gray-100: #f5f7f9;
+    --text: #2A4D40; /* Tom escuro derivado do verde principal */
     --white: #ffffff;
     
     /* Tipografia */
@@ -158,7 +158,7 @@ ul {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    color: var(--blue-900);
+    color: var(--green-900);
     transition: color var(--transition-base);
 }
 
@@ -174,7 +174,7 @@ ul {
 
 .header__logo-link:hover,
 .header__logo-link:focus {
-    color: var(--blue-500);
+    color: var(--green-500);
 }
 
 /* Menu hamburger (mobile) */
@@ -270,11 +270,11 @@ ul {
 .nav__link:hover,
 .nav__link:focus {
     background-color: var(--gray-100);
-    color: var(--blue-700);
+    color: var(--green-700);
 }
 
 .nav__link--active {
-    background-color: var(--blue-500);
+    background-color: var(--green-500);
     color: var(--white);
 }
 
@@ -294,7 +294,7 @@ section {
    5. HERO SECTION
    ======================================== */
 .hero {
-    background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 100%);
+    background: linear-gradient(135deg, var(--green-900) 0%, var(--green-700) 100%);
     color: var(--white);
     padding: var(--spacing-2xl) var(--spacing-sm);
     min-height: calc(100vh - var(--header-height));
@@ -398,7 +398,7 @@ section {
 .about__title {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--blue-900);
+    color: var(--green-900);
     margin-bottom: var(--spacing-lg);
     text-align: center;
 }
@@ -437,7 +437,7 @@ section {
 .about__highlight-title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--blue-700);
+    color: var(--green-700);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -461,7 +461,7 @@ section {
 .projects__title {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--blue-900);
+    color: var(--green-900);
     margin-bottom: var(--spacing-sm);
     text-align: center;
 }
@@ -512,7 +512,7 @@ section {
 .project-card__title {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--blue-900);
+    color: var(--green-900);
     margin-bottom: var(--spacing-xs);
 }
 
@@ -527,7 +527,7 @@ section {
 .project-card__btn {
     align-self: flex-start;
     padding: var(--spacing-xs) var(--spacing-md);
-    background-color: var(--blue-500);
+    background-color: var(--green-500);
     color: var(--white);
     font-weight: 600;
     border-radius: var(--radius-md);
@@ -536,7 +536,7 @@ section {
 
 .project-card__btn:hover,
 .project-card__btn:focus {
-    background-color: var(--blue-700);
+    background-color: var(--green-700);
     transform: scale(1.05);
 }
 
@@ -556,7 +556,7 @@ section {
 .contact__title {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--blue-900);
+    color: var(--green-900);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -587,7 +587,7 @@ section {
 .contact__email-label {
     font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--blue-700);
+    color: var(--green-700);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -595,20 +595,20 @@ section {
 .contact__email-link {
     font-size: var(--font-size-lg);
     font-weight: 600;
-    color: var(--blue-500);
+    color: var(--green-500);
     word-break: break-all;
     transition: color var(--transition-base);
 }
 
 .contact__email-link:hover,
 .contact__email-link:focus {
-    color: var(--blue-700);
+    color: var(--green-700);
     text-decoration: underline;
 }
 
 .contact__copy-btn {
     padding: var(--spacing-sm) var(--spacing-lg);
-    background-color: var(--blue-500);
+    background-color: var(--green-500);
     color: var(--white);
     font-weight: 600;
     border-radius: var(--radius-md);
@@ -617,7 +617,7 @@ section {
 
 .contact__copy-btn:hover,
 .contact__copy-btn:focus {
-    background-color: var(--blue-700);
+    background-color: var(--green-700);
     transform: scale(1.05);
 }
 
@@ -625,7 +625,7 @@ section {
     min-height: 24px;
     font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--blue-700);
+    color: var(--green-700);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -640,7 +640,7 @@ section {
    9. FOOTER
    ======================================== */
 .footer {
-    background-color: var(--blue-900);
+    background-color: var(--green-900);
     color: var(--white);
     padding: var(--spacing-xl) var(--spacing-sm);
 }
@@ -679,7 +679,7 @@ section {
 
 .footer__social-link:hover,
 .footer__social-link:focus {
-    background-color: var(--blue-500);
+    background-color: var(--green-500);
     transform: translateY(-4px);
 }
 
@@ -768,7 +768,7 @@ section {
 .modal__title {
     font-size: var(--font-size-xl);
     font-weight: 700;
-    color: var(--blue-900);
+    color: var(--green-900);
     margin-bottom: var(--spacing-md);
     padding-right: var(--spacing-xl);
 }
