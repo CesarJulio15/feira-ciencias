@@ -1,0 +1,226 @@
+<!-- ========================================
+     INDEX.HTML - Feira de Ciências SESI Jacareí
+     HTML semântico e acessível (WCAG 2.1 AA)
+     ======================================== -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Feira de Ciências SESI Jacareí - Explorando o futuro através da ciência e inovação">
+    <meta name="theme-color" content="#0b3d91">
+    <title>Feira de Ciências SESI Jacareí 2025</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header fixo com navegação -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="#hero" class="header__logo-link" aria-label="Ir para o início">
+                    Feira de Ciências SESI Jacareí
+                </a>
+            </div>
+            
+            <button 
+                class="header__toggle" 
+                id="menu-toggle" 
+                aria-expanded="false" 
+                aria-controls="nav-menu"
+                aria-label="Abrir menu de navegação">
+                <span class="header__toggle-icon"></span>
+            </button>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#hero" class="nav__link nav__link--active">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#projects" class="nav__link">Projetos</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        Explorando o Futuro Através da Ciência
+                    </h1>
+                    <p class="hero__subtitle">
+                        A maior feira de ciências estudantil de Jacareí. 
+                        Inovação, descoberta e aprendizado para todos.
+                    </p>
+                    <a href="#about" class="hero__cta">
+                        Saiba Mais
+                    </a>
+                </div>
+                <div class="hero__image">
+                    <!-- Imagem responsiva com srcset -->
+                    <picture>
+                        <source 
+                            media="(min-width: 768px)" 
+                            srcset="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a8bf7;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230b3d91;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23grad)'/%3E%3Ccircle cx='400' cy='200' r='80' fill='%2386bdfc' opacity='0.6'/%3E%3Ccircle cx='300' cy='350' r='60' fill='%231464d2' opacity='0.5'/%3E%3Ccircle cx='550' cy='400' r='70' fill='%232a8bf7' opacity='0.4'/%3E%3Cpath d='M 200 500 Q 400 400 600 500' stroke='%23f5f7fb' stroke-width='3' fill='none' opacity='0.7'/%3E%3C/svg%3E">
+                        <img 
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232a8bf7;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230b3d91;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='400' fill='url(%23grad2)'/%3E%3Ccircle cx='200' cy='150' r='60' fill='%2386bdfc' opacity='0.6'/%3E%3Ccircle cx='150' cy='250' r='45' fill='%231464d2' opacity='0.5'/%3E%3C/svg%3E" 
+                            alt="Ilustração representando ciência e inovação com formas geométricas abstratas"
+                            class="hero__img"
+                            loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Section -->
+        <section class="about" id="about">
+            <div class="about__container">
+                <h2 class="about__title">Sobre a Feira</h2>
+                <div class="about__content">
+                    <p class="about__text">
+                        A Feira de Ciências SESI Jacareí é um evento anual que reúne estudantes, 
+                        professores e a comunidade para celebrar a ciência, tecnologia e inovação. 
+                        Nosso objetivo é despertar a curiosidade científica e incentivar o 
+                        pensamento crítico através de projetos práticos e experimentos inovadores.
+                    </p>
+                    <p class="about__text">
+                        Com mais de 50 projetos apresentados por alunos do ensino fundamental e médio, 
+                        a feira abrange áreas como Biologia, Física, Química, Robótica, Sustentabilidade 
+                        e Computação. É uma oportunidade única de aprendizado interativo e compartilhamento 
+                        de conhecimento.
+                    </p>
+                    <div class="about__highlights">
+                        <div class="about__highlight-item">
+                            <h3 class="about__highlight-title">Objetivos Educacionais</h3>
+                            <p class="about__highlight-text">
+                                Estimular o método científico, promover trabalho em equipe e 
+                                desenvolver habilidades de comunicação e apresentação.
+                            </p>
+                        </div>
+                        <div class="about__highlight-item">
+                            <h3 class="about__highlight-title">Público-Alvo</h3>
+                            <p class="about__highlight-text">
+                                Alunos do SESI Jacareí, suas famílias, educadores e toda a 
+                                comunidade interessada em ciência e educação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projetos Section -->
+        <section class="projects" id="projects">
+            <div class="projects__container">
+                <h2 class="projects__title">Projetos em Destaque</h2>
+                <p class="projects__subtitle">
+                    Conheça alguns dos projetos inovadores desenvolvidos por nossos estudantes
+                </p>
+                <div class="projects__grid" id="projects-grid">
+                    <!-- Cards serão inseridos via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato Section -->
+        <section class="contact" id="contact">
+            <div class="contact__container">
+                <h2 class="contact__title">Entre em Contato</h2>
+                <p class="contact__description">
+                    Tem dúvidas ou quer saber mais sobre a feira? Entre em contato conosco!
+                </p>
+                
+                <div class="contact__email-box">
+                    <div class="contact__email-content">
+                        <span class="contact__email-label">E-mail:</span>
+                        <a 
+                            href="mailto:contato@sesisjacarei.edu.br" 
+                            class="contact__email-link"
+                            id="email-link">
+                            contato@sesisjacarei.edu.br
+                        </a>
+                    </div>
+                    <button 
+                        class="contact__copy-btn" 
+                        id="copy-email-btn"
+                        aria-label="Copiar e-mail para a área de transferência">
+                        Copiar E-mail
+                    </button>
+                </div>
+                
+                <!-- Feedback acessível para cópia -->
+                <div 
+                    class="contact__feedback" 
+                    id="copy-feedback" 
+                    role="status" 
+                    aria-live="polite" 
+                    aria-atomic="true">
+                </div>
+                
+                <p class="contact__note">
+                    <strong>Observação:</strong> Não utilizamos formulários online. 
+                    Todo contato é feito exclusivamente por e-mail para garantir sua privacidade.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    Desenvolvido para a Feira de Ciências SESI Jacareí
+                </p>
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link" aria-label="Visite nosso Facebook">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Visite nosso Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="white"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-link" aria-label="Visite nosso YouTube">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 SESI Jacareí. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal para Ver Mais (acessível) -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close" aria-label="Fechar modal">
+                &times;
+            </button>
+            <h3 class="modal__title" id="modal-title"></h3>
+            <div class="modal__body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
