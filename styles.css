@@ -155,10 +155,21 @@ ul {
 }
 
 .header__logo-link {
-    font-size: var(--font-size-lg);
-    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
     color: var(--blue-900);
     transition: color var(--transition-base);
+}
+
+.header__logo-img {
+    height: 40px;
+    width: auto;
+}
+
+.header__logo-text {
+    font-size: var(--font-size-lg);
+    font-weight: 700;
 }
 
 .header__logo-link:hover,

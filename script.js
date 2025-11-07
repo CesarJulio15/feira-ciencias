@@ -8,7 +8,22 @@
     'use strict';
     
     /* ========================================
-       1. DADOS DOS PROJETOS (JSON)
+       1. CONSTANTES DE IMAGENS
+       ======================================== */
+    const IMAGES = {
+        logo: 'images/geral/logo.png',
+        hero: 'images/geral/hero.jpg',
+        favicon: 'images/geral/favicon.ico',
+        social: {
+            facebook: 'images/geral/facebook.svg',
+            instagram: 'images/geral/instagram.svg',
+            youtube: 'images/geral/youtube.svg'
+        },
+        background: 'images/geral/background.jpg'
+    };
+    
+    /* ========================================
+       2. DADOS DOS PROJETOS (JSON)
        ======================================== */
     const projectsData = [
         {
@@ -43,21 +58,93 @@
             title: 'Cultivo Hidropônico Inteligente',
             description: 'Sistema automatizado de cultivo sem solo com monitoramento por sensores e controle de nutrientes.',
             fullDescription: 'Utilizando sensores de umidade, pH e temperatura, este projeto automatiza o cultivo hidropônico de hortaliças. O sistema coleta dados em tempo real e ajusta automaticamente a irrigação e nutrientes, promovendo agricultura urbana sustentável e eficiente.',
-            category: 'Biologia e Tecnologia'
+            category: 'Biologia e Tecnologia',
+            images: [
+                {
+                    url: 'images/hidroponico/sistema-1.jpg',
+                    caption: 'Sistema hidropônico completo'
+                },
+                {
+                    url: 'images/hidroponico/sensores-2.jpg',
+                    caption: 'Conjunto de sensores instalados'
+                },
+                {
+                    url: 'images/hidroponico/plantas-3.jpg',
+                    caption: 'Crescimento das hortaliças'
+                },
+                {
+                    url: 'images/hidroponico/interface-4.jpg',
+                    caption: 'Interface de monitoramento'
+                }
+            ],
+            detailedDescription: {
+                objetivo: 'Desenvolver um sistema hidropônico automatizado e acessível para cultivo urbano de hortaliças.',
+                metodologia: 'Implementação de sistema NFT com Arduino, sensores de pH, condutividade elétrica, temperatura e bomba dosadora automática.',
+                resultados: 'Produção de alface, rúcula e agrião com crescimento 30% mais rápido que métodos tradicionais e economia de 70% de água.',
+                conclusao: 'O sistema provou ser eficiente e economicamente viável para agricultura urbana em pequena escala.'
+            }
         },
         {
             id: 3,
             title: 'Robô Seguidor de Linha',
             description: 'Robô autônomo programado em Arduino que utiliza sensores infravermelhos para navegar por trajetos marcados.',
             fullDescription: 'Este robô foi desenvolvido com Arduino e sensores infravermelhos, capaz de seguir linhas pretas sobre superfícies claras. O projeto envolve programação, eletrônica e mecânica, demonstrando princípios de robótica móvel e automação.',
-            category: 'Robótica e Programação'
+            category: 'Robótica e Programação',
+            images: [
+                {
+                    url: 'images/robo/montagem-1.jpg',
+                    caption: 'Montagem do chassi do robô'
+                },
+                {
+                    url: 'images/robo/circuito-2.jpg',
+                    caption: 'Placa de circuito e sensores'
+                },
+                {
+                    url: 'images/robo/teste-3.jpg',
+                    caption: 'Teste em pista com curvas'
+                },
+                {
+                    url: 'images/robo/codigo-4.jpg',
+                    caption: 'Código de controle no Arduino'
+                }
+            ],
+            detailedDescription: {
+                objetivo: 'Criar um robô autônomo capaz de seguir trajetos predefinidos usando sensores infravermelhos.',
+                metodologia: 'Construção com Arduino Nano, 3 sensores IR, ponte H L298N, motores DC e chassis impresso em 3D.',
+                resultados: 'O robô consegue seguir linhas com precisão de 95% e navegar curvas de até 90 graus a 0.5 m/s.',
+                conclusao: 'Projeto demonstra conceitos de robótica móvel e controle PID de forma prática e educativa.'
+            }
         },
         {
             id: 4,
             title: 'Purificador de Água Caseiro',
             description: 'Sistema de filtragem em camadas usando materiais acessíveis para tratamento básico de água.',
             fullDescription: 'Utilizando areia, carvão ativado, pedras e algodão em camadas, este purificador demonstra métodos físicos e químicos de filtragem. O projeto aborda a importância do acesso à água potável e técnicas de purificação de baixo custo para comunidades carentes.',
-            category: 'Química e Sustentabilidade'
+            category: 'Química e Sustentabilidade',
+            images: [
+                {
+                    url: 'images/purificador/sistema-1.jpg',
+                    caption: 'Sistema completo montado'
+                },
+                {
+                    url: 'images/purificador/camadas-2.jpg',
+                    caption: 'Camadas de filtragem'
+                },
+                {
+                    url: 'images/purificador/teste-3.jpg',
+                    caption: 'Teste com água contaminada'
+                },
+                {
+                    url: 'images/purificador/resultado-4.jpg',
+                    caption: 'Resultado da purificação'
+                }
+            ],
+            detailedDescription: {
+                objetivo: 'Desenvolver um sistema de purificação de água de baixo custo usando materiais acessíveis.',
+                metodologia: 'Construção de filtro multicamadas com areia grossa e fina, carvão ativado, pedras e algodão, com testes de qualidade da água.',
+                resultados: 'Redução de 95% da turbidez, 85% de material orgânico e 99% de coliformes totais na água tratada.',
+                conclusao: 'Sistema eficiente e viável para comunidades sem acesso a água tratada, com custo aproximado de R$ 50,00.'
+            }
         }
     ];
     
