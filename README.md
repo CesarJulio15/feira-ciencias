@@ -1,149 +1,186 @@
-# Feira de Ciências SESI Jacareí - Landing Page
+# Guia para Criar as Páginas das Outras Salas
 
-Landing page profissional, moderna e totalmente responsiva desenvolvida com HTML, CSS e JavaScript puros (sem frameworks ou bibliotecas externas).
+## 📁 Estrutura de Arquivos
 
-## 🚀 Como Abrir Localmente
-
-1. **Baixe os arquivos** para uma pasta no seu computador:
-   - `index.html`
-   - `styles.css`
-   - `script.js`
-
-2. **Abra o arquivo** `index.html` em qualquer navegador moderno:
-   - Dê um duplo clique no arquivo, ou
-   - Clique com botão direito → "Abrir com" → escolha seu navegador
-
-3. **Pronto!** A página será carregada localmente sem necessidade de servidor.
-
-## 🎨 Personalização
-
-### Alterar Paleta de Cores
-
-Edite as variáveis CSS no arquivo `styles.css` (linhas 10-15):
-
-```css
-:root {
-    --blue-900: #0b3d91;  /* Azul escuro principal */
-    --blue-700: #1464d2;  /* Azul médio */
-    --blue-500: #2a8bf7;  /* Azul principal (botões) */
-    --blue-300: #86bdfc;  /* Azul claro (destaques) */
-    --gray-100: #f5f7fb;  /* Fundo de seções */
-    --text: #0b2140;      /* Cor do texto */
-}
-```
-
-### Alterar Textos e Conteúdo
-
-- **Textos gerais**: edite diretamente no `index.html`
-- **Projetos**: modifique o array `projectsData` no `script.js` (linhas 13-46)
-- **E-mail de contato**: altere em dois lugares:
-  - No `index.html` (seção `#contact`)
-  - No `script.js` (função `copyEmailToClipboard`, linha 273)
-
-### Adicionar/Remover Projetos
-
-No arquivo `script.js`, edite o array `projectsData`:
-
-```javascript
-const projectsData = [
-    {
-        id: 1,
-        title: 'Nome do Projeto',
-        description: 'Descrição curta',
-        fullDescription: 'Descrição completa para o modal',
-        category: 'Categoria do Projeto'
-    },
-    // Adicione mais objetos aqui...
-];
-```
-
-## ✅ Checklist de Acessibilidade
-
-Esta landing page implementa as seguintes práticas de acessibilidade (WCAG 2.1 AA):
-
-- ✅ **HTML Semântico**: uso correto de `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`
-- ✅ **Navegação por Teclado**: todos os elementos interativos são acessíveis via Tab
-- ✅ **Foco Visível**: outline destacado em todos os elementos focáveis
-- ✅ **Atributos ARIA**: `aria-label`, `aria-expanded`, `aria-live`, `aria-modal`
-- ✅ **Contraste de Cores**: todos os textos têm contraste mínimo de 4.5:1 (AA)
-- ✅ **Textos Alternativos**: todas as imagens possuem atributos `alt` descritivos
-- ✅ **Modal Acessível**: trap focus, fechamento com ESC, foco gerenciado
-- ✅ **Respeito a `prefers-reduced-motion`**: animações desabilitadas se necessário
-- ✅ **Feedback de Ações**: `aria-live` para informar cópia do e-mail
-- ✅ **Skip Links**: rolagem suave entre seções
-
-## 📱 Responsividade
-
-A página é totalmente responsiva e foi testada em:
-
-- **Mobile**: 360px - 767px (menu hamburger)
-- **Tablet**: 768px - 1023px (menu horizontal, layout adaptado)
-- **Desktop**: 1024px - 1439px (layout completo)
-- **Large Desktop**: 1440px+ (grid de 3 colunas para projetos)
-
-## 🧪 Testes Sugeridos
-
-### Navegação por Teclado
-1. Use `Tab` para navegar entre elementos
-2. Use `Enter` ou `Espaço` para ativar botões/links
-3. Use `Esc` para fechar o modal
-4. Verifique se o foco está sempre visível
-
-### Funcionalidade de Cópia de E-mail
-1. Clique no botão "Copiar E-mail"
-2. Verifique se aparece a mensagem de sucesso
-3. Cole em um editor de texto para confirmar (Ctrl+V)
-
-### Responsividade
-1. Redimensione o navegador para diferentes larguras
-2. Teste em 360px (mobile pequeno)
-3. Teste em 768px (tablet)
-4. Teste em 1440px (desktop grande)
-
-### Modal
-1. Clique em "Ver Mais" em qualquer projeto
-2. Verifique se o foco vai para o botão de fechar
-3. Tente usar `Tab` (foco deve ficar preso no modal)
-4. Pressione `Esc` para fechar
-
-## 🏗️ Estrutura de Arquivos
+Você precisará criar os seguintes arquivos:
 
 ```
 feira-ciencias/
-│
-├── index.html      # Estrutura HTML semântica
-├── styles.css      # Estilos CSS com variáveis e BEM
-├── script.js       # JavaScript modular (IIFE)
-└── README.md       # Este arquivo
+├── index.html (já atualizado)
+├── sala-9ano.html (modelo criado)
+├── sala-1ano.html (criar)
+├── sala-2ano.html (criar)
+├── sala-3ano.html (criar)
+├── styles.css (existente)
+├── sala-styles.css (novo - estilos das salas)
+├── script.js (existente)
+└── sala-script.js (novo - interações das salas)
 ```
 
-## 🔧 Tecnologias Utilizadas
+## 🔄 Como Criar as Outras Salas
 
-- **HTML5**: estrutura semântica e acessível
-- **CSS3**: custom properties, flexbox, grid, animações
-- **JavaScript (ES6+)**: IIFE, event delegation, Clipboard API
+### Para criar `sala-1ano.html`, `sala-2ano.html` e `sala-3ano.html`:
 
-## 📋 Principais Decisões de Design
+1. **Copie o arquivo `sala-9ano.html`**
+2. **Altere apenas estas partes:**
 
-### Metodologia CSS
-- **BEM (Block Element Modifier)** para nomenclatura de classes
-- **Mobile-First**: estilos base para mobile, media queries para telas maiores
-- **CSS Custom Properties**: todas as cores, espaçamentos e valores reutilizáveis em variáveis
+#### No `<title>`:
+```html
+<!-- 9º Ano -->
+<title>9º Ano - Feira de Ciências SESI Jacareí 2025</title>
 
-### JavaScript
-- **IIFE**: todo código encapsulado para evitar poluição do escopo global
-- **Event Delegation**: listeners no container pai para performance
-- **Dados JSON**: projetos armazenados em array, renderizados dinamicamente
+<!-- Mude para: -->
+<title>1º Ano - Feira de Ciências SESI Jacareí 2025</title>
+```
 
-### Acessibilidade
-- **Trap Focus**: foco preso dentro do modal quando aberto
-- **Gerenciamento de Foco**: retorno ao elemento original após fechar modal
-- **Feedback Acessível**: `aria-live` para leitores de tela
+#### No `<meta description>`:
+```html
+<meta name="description" content="Projetos do 1º Ano - Feira de Ciências SESI Jacareí">
+```
 
-## 📞 Contato
+#### No cabeçalho da sala:
+```html
+<h1 class="room-header__title">Projetos do 1º Ano</h1>
+<p class="room-header__subtitle">Ensino Médio</p>
+```
 
-Para dúvidas sobre a feira: **contato@sesisjacarei.edu.br**
+#### Nos links de navegação ativos:
+```html
+<!-- Marque o link correspondente como ativo -->
+<li><a href="sala-1ano.html" class="nav__link nav__link--active">1º Ano</a></li>
+```
+
+3. **Substitua os cards de projeto** pelos projetos reais de cada turma
+
+## 📝 Estrutura de um Card de Projeto
+
+Cada projeto deve seguir este modelo:
+
+```html
+<article class="project-card">
+    <div class="project-card__header">
+        <h2 class="project-card__title">NOME DO PROJETO</h2>
+        <span class="project-card__category">CATEGORIA</span>
+    </div>
+    
+    <div class="project-card__body">
+        <p class="project-card__description">
+            Descrição breve do projeto (2-3 linhas)
+        </p>
+        
+        <div class="project-card__team">
+            <h3 class="project-card__team-title">Integrantes:</h3>
+            <ul class="project-card__team-list">
+                <li>Nome Completo 1</li>
+                <li>Nome Completo 2</li>
+                <li>Nome Completo 3</li>
+            </ul>
+        </div>
+        
+        <div class="project-card__pitch">
+            <span class="project-card__pitch-icon">📍</span>
+            <div>
+                <strong>Local do Pitch:</strong>
+                <p>Local específico - Horário</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="project-card__btn" data-project="ID_ÚNICO">
+        Ver Mais Detalhes
+    </button>
+</article>
+```
+
+## 🎨 Categorias Sugeridas
+
+Use estas classes para as categorias (cores automáticas):
+- `Física`
+- `Química`
+- `Biologia`
+- `Tecnologia`
+- `Matemática`
+- `Robótica`
+- `Sustentabilidade`
+- `Saúde`
+
+## 🔢 IDs dos Projetos
+
+Para o modal funcionar, cada projeto precisa de um ID único no atributo `data-project`:
+
+- 9º Ano: IDs 1-10
+- 1º Ano: IDs 11-20
+- 2º Ano: IDs 21-30
+- 3º Ano: IDs 31-40
+
+## 📊 Adicionando Detalhes no Modal
+
+No arquivo `sala-script.js`, adicione os dados detalhados dos projetos:
+
+```javascript
+const projectsData = {
+    11: {  // ID do projeto
+        title: "Nome do Projeto",
+        category: "Categoria",
+        team: ["Integrante 1", "Integrante 2"],
+        pitch: "Local - Horário",
+        fullDescription: `
+            <p><strong>Objetivo:</strong> Descrição do objetivo...</p>
+            <p><strong>Metodologia:</strong> Como foi feito...</p>
+            <p><strong>Resultados:</strong> O que foi alcançado...</p>
+        `
+    },
+    // Adicione mais projetos...
+};
+```
+
+## ✅ Checklist de Implementação
+
+Para cada sala:
+
+- [ ] Criar arquivo HTML (sala-1ano.html, sala-2ano.html, sala-3ano.html)
+- [ ] Alterar título e descrição da página
+- [ ] Atualizar cabeçalho (título e subtítulo)
+- [ ] Marcar link de navegação correto como ativo
+- [ ] Adicionar todos os cards de projeto da turma
+- [ ] Definir IDs únicos para cada projeto
+- [ ] Adicionar dados detalhados no sala-script.js
+- [ ] Testar navegação entre salas
+- [ ] Testar modais de "Ver Mais Detalhes"
+- [ ] Verificar responsividade no mobile
+
+## 🎯 Exemplo Completo de Troca
+
+**De (9º Ano):**
+```html
+<h1 class="room-header__title">Projetos do 9º Ano</h1>
+<p class="room-header__subtitle">Ensino Fundamental II</p>
+```
+
+**Para (1º Ano):**
+```html
+<h1 class="room-header__title">Projetos do 1º Ano</h1>
+<p class="room-header__subtitle">Ensino Médio</p>
+```
+
+## 📱 Recursos Incluídos
+
+✅ Layout responsivo para mobile e desktop
+✅ Modal com detalhes expandidos dos projetos
+✅ Navegação por dropdown entre salas
+✅ Destaque visual dos integrantes e local do pitch
+✅ Categorias com cores diferenciadas
+✅ Animações e hover effects
+✅ Acessibilidade (ARIA labels, navegação por teclado)
+
+## 🚀 Próximos Passos
+
+1. Colete os dados de todos os projetos (nome, integrantes, local do pitch)
+2. Organize por ano/sala
+3. Crie as 3 páginas restantes seguindo o modelo
+4. Adicione os dados detalhados no JavaScript
+5. Teste tudo!
 
 ---
 
-**Desenvolvido para a Feira de Ciências SESI Jacareí 2025**
+**Dica:** Mantenha backup dos arquivos originais antes de fazer alterações!

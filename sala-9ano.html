@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projetos do 9º Ano - Feira de Ciências SESI Jacareí">
+    <meta name="theme-color" content="#0b3d91">
+    <title>9º Ano - Feira de Ciências SESI Jacareí 2025</title>
+    <link rel="icon" href="favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sala-styles.css">
+</head>
+<body>
+    <!-- Header fixo com navegação -->
+    <header class="header" id="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <a href="index.html" class="header__logo-link" aria-label="Voltar para o início">
+                    <img src="logo_sesi.webp" alt="Logo SESI Jacareí" class="header__logo-img">
+                    <span class="header__logo-text">Feira de Ciências SESI Jacareí</span>
+                </a>
+            </div>
+            
+            <button 
+                class="header__toggle" 
+                id="menu-toggle" 
+                aria-expanded="false" 
+                aria-controls="nav-menu"
+                aria-label="Abrir menu de navegação">
+                <span class="header__toggle-icon"></span>
+            </button>
+            
+            <nav class="nav" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#hero" class="nav__link">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item nav__item--dropdown">
+                        <a href="#" class="nav__link nav__link--active">Projetos</a>
+                        <ul class="nav__dropdown">
+                            <li><a href="sala-9ano.html" class="nav__link nav__link--active">9º Ano</a></li>
+                            <li><a href="sala-1ano.html" class="nav__link">1º Ano</a></li>
+                            <li><a href="sala-2ano.html" class="nav__link">2º Ano</a></li>
+                            <li><a href="sala-3ano.html" class="nav__link">3º Ano</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Cabeçalho da Sala -->
+        <section class="room-header">
+            <div class="room-header__container">
+                <a href="index.html#projects" class="room-header__back">
+                    ← Voltar para Salas
+                </a>
+                <h1 class="room-header__title">Projetos do 9º Ano</h1>
+                <p class="room-header__subtitle">Ensino Fundamental II</p>
+            </div>
+        </section>
+
+        <!-- Grid de Projetos -->
+        <section class="room-projects">
+            <div class="room-projects__container">
+                
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Energia Solar Sustentável</h2>
+                        <span class="project-card__category">Física</span>
+                    </div>
+                    
+                    <div class="project-card__body">
+                        <p class="project-card__description">
+                            Desenvolvimento de um sistema de captação de energia solar 
+                            para uso em pequenas residências, com foco em sustentabilidade 
+                            e redução de custos energéticos.
+                        </p>
+                        
+                        <div class="project-card__team">
+                            <h3 class="project-card__team-title">Integrantes:</h3>
+                            <ul class="project-card__team-list">
+                                <li>Ana Paula Silva</li>
+                                <li>Carlos Eduardo Santos</li>
+                                <li>Mariana Oliveira</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-card__pitch">
+                            <span class="project-card__pitch-icon">📍</span>
+                            <div>
+                                <strong>Local do Pitch:</strong>
+                                <p>Auditório Principal - 10h30</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-card__btn" data-project="1">
+                        Ver Mais Detalhes
+                    </button>
+                </article>
+
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Robótica e Automação</h2>
+                        <span class="project-card__category">Tecnologia</span>
+                    </div>
+                    
+                    <div class="project-card__body">
+                        <p class="project-card__description">
+                            Criação de um robô autônomo capaz de realizar tarefas 
+                            domésticas simples, utilizando sensores e programação Arduino.
+                        </p>
+                        
+                        <div class="project-card__team">
+                            <h3 class="project-card__team-title">Integrantes:</h3>
+                            <ul class="project-card__team-list">
+                                <li>Pedro Henrique Costa</li>
+                                <li>Julia Fernandes</li>
+                                <li>Lucas Almeida</li>
+                                <li>Beatriz Rodrigues</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-card__pitch">
+                            <span class="project-card__pitch-icon">📍</span>
+                            <div>
+                                <strong>Local do Pitch:</strong>
+                                <p>Sala de Tecnologia - 14h00</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-card__btn" data-project="2">
+                        Ver Mais Detalhes
+                    </button>
+                </article>
+
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <div class="project-card__header">
+                        <h2 class="project-card__title">Purificação de Água</h2>
+                        <span class="project-card__category">Química</span>
+                    </div>
+                    
+                    <div class="project-card__body">
+                        <p class="project-card__description">
+                            Sistema de purificação de água utilizando materiais recicláveis 
+                            e filtros naturais, para comunidades sem acesso à água potável.
+                        </p>
+                        
+                        <div class="project-card__team">
+                            <h3 class="project-card__team-title">Integrantes:</h3>
+                            <ul class="project-card__team-list">
+                                <li>Rafaela Lima</li>
+                                <li>Gabriel Souza</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="project-card__pitch">
+                            <span class="project-card__pitch-icon">📍</span>
+                            <div>
+                                <strong>Local do Pitch:</strong>
+                                <p>Laboratório de Química - 11h15</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="project-card__btn" data-project="3">
+                        Ver Mais Detalhes
+                    </button>
+                </article>
+
+                <!-- Adicione mais projetos conforme necessário -->
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    Desenvolvido para a Feira de Ciências SESI Jacareí
+                </p>
+            </div>
+            <p class="footer__copyright">
+                &copy; 2025 Deckers. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Modal para Ver Mais -->
+    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__overlay" id="modal-overlay"></div>
+        <div class="modal__content">
+            <button class="modal__close" id="modal-close" aria-label="Fechar modal">
+                &times;
+            </button>
+            <h3 class="modal__title" id="modal-title"></h3>
+            <div class="modal__body" id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="sala-script.js" defer></script>
+</body>
+</html>
