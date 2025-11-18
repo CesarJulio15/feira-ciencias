@@ -479,6 +479,62 @@ section {
     gap: var(--spacing-lg);
 }
 
+/* Links rápidos por série (barra acima do grid) */
+.projects__quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.projects__link {
+    display: inline-block;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--green-500);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-base), background-color var(--transition-base);
+}
+
+.projects__link:hover,
+.projects__link:focus {
+    background-color: var(--green-700);
+    transform: translateY(-3px);
+}
+
+/* Modo compacto: mostrar apenas título, subtítulo e os botões de série */
+.projects--compact .projects__grid {
+    display: none;
+}
+
+/* Ajustes visuais para os botões (como no anexo) */
+.projects__link {
+    padding: 0.75rem 1.1rem;
+    border-radius: 12px;
+    background-color: #b7e6d3; /* tom mais claro para combinar com exemplo */
+    color: var(--green-900);
+    box-shadow: 0 4px 10px rgba(34, 64, 55, 0.06);
+    font-size: 1rem;
+}
+
+.projects__link:hover,
+.projects__link:focus {
+    background-color: #97dbc2;
+    color: var(--green-900);
+    transform: translateY(-2px);
+}
+
+/* Espaçamento maior entre título e os botões para corresponder ao anexo */
+.projects__title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.projects__subtitle {
+    margin-bottom: var(--spacing-lg);
+}
+
 /* Card de projeto (BEM) */
 .project-card {
     background-color: var(--white);
@@ -538,6 +594,24 @@ section {
 .project-card__btn:focus {
     background-color: var(--green-700);
     transform: scale(1.05);
+}
+
+/* Tornar o link do card ocupando toda a área do card (imagem + conteúdo) */
+.project-card__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-card__actions {
+    padding: var(--spacing-md);
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* Ajuste para que o botão 'Ver Mais' apareça alinhado e com espaço */
+.project-card__btn {
+    min-width: 120px;
 }
 
 /* ========================================

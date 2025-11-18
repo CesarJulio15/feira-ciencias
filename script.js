@@ -32,6 +32,7 @@
             description: 'Sistema fotovoltaico funcional que demonstra conversão de energia solar em elétrica para pequenos dispositivos.',
             fullDescription: 'Este projeto apresenta um painel solar em escala reduzida capaz de alimentar LEDs e carregar baterias. Os estudantes exploraram conceitos de física aplicada, circuitos elétricos e sustentabilidade, demonstrando como a energia renovável pode ser acessível e educativa.',
             category: 'Física e Sustentabilidade',
+            sala: 'sala-3ano.html',
             images: [
                 {
                     url: 'images/energia-solar/painel-1.jpg',
@@ -59,6 +60,7 @@
             description: 'Sistema automatizado de cultivo sem solo com monitoramento por sensores e controle de nutrientes.',
             fullDescription: 'Utilizando sensores de umidade, pH e temperatura, este projeto automatiza o cultivo hidropônico de hortaliças. O sistema coleta dados em tempo real e ajusta automaticamente a irrigação e nutrientes, promovendo agricultura urbana sustentável e eficiente.',
             category: 'Biologia e Tecnologia',
+            sala: 'sala-2ano.html',
             images: [
                 {
                     url: 'images/hidroponico/sistema-1.jpg',
@@ -90,6 +92,7 @@
             description: 'Robô autônomo programado em Arduino que utiliza sensores infravermelhos para navegar por trajetos marcados.',
             fullDescription: 'Este robô foi desenvolvido com Arduino e sensores infravermelhos, capaz de seguir linhas pretas sobre superfícies claras. O projeto envolve programação, eletrônica e mecânica, demonstrando princípios de robótica móvel e automação.',
             category: 'Robótica e Programação',
+            sala: 'sala-3ano.html',
             images: [
                 {
                     url: 'images/robo/montagem-1.jpg',
@@ -121,6 +124,7 @@
             description: 'Sistema de filtragem em camadas usando materiais acessíveis para tratamento básico de água.',
             fullDescription: 'Utilizando areia, carvão ativado, pedras e algodão em camadas, este purificador demonstra métodos físicos e químicos de filtragem. O projeto aborda a importância do acesso à água potável e técnicas de purificação de baixo custo para comunidades carentes.',
             category: 'Química e Sustentabilidade',
+            sala: 'sala-9ano.html',
             images: [
                 {
                     url: 'images/purificador/sistema-1.jpg',
@@ -243,15 +247,23 @@
     function renderProjects() {
         if (!elements.projectsGrid) return;
         
-        const projectsHTML = projectsData.map(project => `
-            <article class="project-card" data-project-id="${project.id}">
-                <div class="project-card__image" 
-                     role="img" 
-                     aria-label="Ilustração do projeto ${project.title}">
-                </div>
-                <div class="project-card__content">
-                    <h3 class="project-card__title">${project.title}</h3>
-                    <p class="project-card__description">${project.description}</p>
+        const projectsHTML = projectsData.map(project => {
+            const thumb = (project.images && project.images[0] && project.images[0].url) ? project.images[0].url : 'estudantescapa.jpeg';
+            const salaHref = project.sala ? project.sala : '#';
+            return `
+            <article class="project-card" data-project-id="${project.id}" role="listitem">
+                <a class="project-card__link" href="${salaHref}" aria-label="Abrir página da sala para ${project.title}">
+                    <div class="project-card__image" 
+                         role="img" 
+                         aria-label="Ilustração do projeto ${project.title}"
+                         style="background-image: url('${thumb}'); background-size: cover; background-position: center;">
+                    </div>
+                    <div class="project-card__content">
+                        <h3 class="project-card__title">${project.title}</h3>
+                        <p class="project-card__description">${project.description}</p>
+                    </div>
+                </a>
+                <div class="project-card__actions">
                     <button class="project-card__btn" 
                             data-project-id="${project.id}"
                             aria-label="Ver mais detalhes sobre ${project.title}">
@@ -259,7 +271,7 @@
                     </button>
                 </div>
             </article>
-        `).join('');
+        `}).join('');
         
         elements.projectsGrid.innerHTML = projectsHTML;
     }
@@ -401,7 +413,10 @@
     // Event delegation para botões "Ver Mais"
     if (elements.projectsGrid) {
         elements.projectsGrid.addEventListener('click', (e) => {
+            // Se clicou no botão 'Ver Mais', prevenir navegação e abrir modal
             if (e.target.classList.contains('project-card__btn')) {
+                e.preventDefault();
+                e.stopPropagation();
                 const projectId = e.target.getAttribute('data-project-id');
                 openModal(projectId);
             }

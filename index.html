@@ -119,16 +119,23 @@
         </section>
 
         <!-- Projetos Section -->
+        <section class="projects projects--compact" id="projects" aria-labelledby="projects-title">
+            <div class="projects__container">
+                <h2 class="projects__title" id="projects-title">Projetos</h2>
+                <p class="projects__subtitle">Conheça alguns projetos destacados e explore por série.</p>
 
-                    <li class="nav__item nav__item--dropdown">
-                        <a href="#" class="nav__link">Projetos</a>
-                        <ul class="nav__dropdown">
-                            <li><a href="sala-9ano.html" class="nav__link">9º Ano</a></li>
-                            <li><a href="sala-1ano.html" class="nav__link">1º Ano</a></li>
-                            <li><a href="sala-2ano.html" class="nav__link">2º Ano</a></li>
-                            <li><a href="sala-3ano.html" class="nav__link">3º Ano</a></li>
-                        </ul>
-                    </li>
+                <div class="projects__quick-links" aria-label="Links rápidos por série">
+                    <a class="projects__link" href="sala-9ano.html">9º Ano</a>
+                    <a class="projects__link" href="sala-3ano.html">3º Ano</a>
+                    <a class="projects__link" href="sala-2ano.html">2º Ano</a>
+                    <a class="projects__link" href="sala-1ano.html">1º Ano</a>
+                </div>
+
+                <div id="projects-grid" class="projects__grid" role="list" aria-live="polite">
+                    <!-- Os cards são renderizados dinamicamente por `script.js` -->
+                </div>
+            </div>
+        </section>
         <!-- Contato Section -->
         <section class="contact" id="contact">
             <div class="contact__container">
